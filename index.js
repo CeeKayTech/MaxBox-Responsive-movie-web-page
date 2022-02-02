@@ -1,8 +1,30 @@
-let header=document.querySelector('header');
+let header = document.querySelector('header');
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('shadow', window.scrollY > 0);
 });
+
+menu.onclick = () => {
+  menu.classList.toogle('bx-x');
+  navbar.classList.toogle('active');
+}
+window.onscroll = () => {
+  menu.classList.remove('bx-x');
+  navbar.classList.remove('active');
+
+}
+
+// function setup() {
+//   document.getElementById("menu-icon").onclick = setmenu;
+// }
+// function setup() {
+//   var; menu-icon ; document.getElementById("menu-icon");
+//   menu-icon.classname ; "menu-icon"
+// }
+
+
 
 var swiper = new Swiper(".home", {
     spaceBetween: 30,
